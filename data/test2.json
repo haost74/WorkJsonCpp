@@ -1,0 +1,21 @@
+{"books":[
+    {
+      "author" : "Petr",
+      "book_name" : "Test1",
+      "pages" : 200,
+      "year" : 2002
+    },
+    {
+      "author" : "Petr",
+      "book_name" : "Test2",
+      "pages" : 0,
+      "year" : 0
+    },
+    {
+      "author" : "STO",
+      "book_name" : "Rocks",
+      "pages" : 100,
+      "year" : 2002
+    }
+  ]
+}   

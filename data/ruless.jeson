@@ -1,0 +1,19 @@
+{
+	"competitors" : 
+	{
+		"away" : 
+		{
+			"code" : 
+			[
+				1,
+				2,
+				3
+			],
+			"name" : "Aston Villa"
+		},
+		"home" : 
+		{
+			"name" : "Liverpool"
+		}
+	}
+}

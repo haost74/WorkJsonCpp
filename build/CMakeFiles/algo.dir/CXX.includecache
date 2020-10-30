@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/haost/Рабочий стол/algo/main.cpp
+iostream
+-
+string
+-
+bits/stdc++.h
+-
+parser.cpp
+/home/haost/Рабочий стол/algo/parser.cpp
+src/readerJeson.cpp
+/home/haost/Рабочий стол/algo/src/readerJeson.cpp
+
+/home/haost/Рабочий стол/algo/parser.cpp
+string
+-
+iostream
+-
+
+/home/haost/Рабочий стол/algo/src/readerJeson.cpp
+iostream
+-
+fstream
+-
+vector
+-
+jsoncpp/json/json.h
+-
+
