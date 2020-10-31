@@ -57,7 +57,13 @@ void readerObject()
      cout << dataArray.size() << '\n';
 }
 
-
+void Rdata()
+{
+    fstream ifs("../data/test2.json");
+    Json::Reader reader;
+    Json::Value obj;
+    reader.parse(ifs, obj);
+}
 
 std::vector<Json::Value> booksByPeter(const Json::Value& root) {
     std::vector<Json::Value> res;

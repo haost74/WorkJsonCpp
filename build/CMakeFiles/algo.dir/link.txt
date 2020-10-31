@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -rdynamic CMakeFiles/algo.dir/main.cpp.o CMakeFiles/algo.dir/parser.cpp.o -o algo  -ljsoncpp /usr/lib/x86_64-linux-gnu/libcrypto.a -ljsoncpp -lpthread -ldl 

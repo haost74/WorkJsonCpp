@@ -1,3 +1,0 @@
-/home/haost/Рабочий стол/algo/build/CMakeFiles/rebuild_cache.dir
-/home/haost/Рабочий стол/algo/build/CMakeFiles/algo.dir
-/home/haost/Рабочий стол/algo/build/CMakeFiles/edit_cache.dir

@@ -5,6 +5,7 @@
 
 #include "parser.cpp"
 #include "src/readerJeson.cpp"
+#include "src/reader_Json.cpp"
 
 using std::cout;
 using std::string;
@@ -31,6 +32,15 @@ void run(string str, func_parse foo)
 
 //--------------------------------------
 
+//{"simvol": "("}
+class data
+{
+  public:
+  string simvol;
+};
+
+//--------------------------------------
+
 
 int main(int argc, char* argv[])
 {
@@ -46,12 +56,15 @@ int main(int argc, char* argv[])
 
 
 
-   auto vec = readerRulles();
+   //auto vec = readerRulles();
 
    //cout << vec[1] << '\n';
    //readerObject();
 
    readerTest();
+   string path = "../data/TokenTable.json";
+   Reader<data> rd(path);
+   auto res = rd.ReaderToken("fullTokenTable");
 
     return 0;
 }
