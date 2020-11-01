@@ -31,8 +31,11 @@ vector<T> Reader<T>::ReaderToken(string nameArr)
 
    auto items = booksByPeter(obj, nameArr);
    auto temp = items[0];
-
-   cout << temp << '\n';
+   
+   for(auto it = items.begin(); it < items.end(); ++it)
+   {
+      res.push_back((*it)["simvol"]);
+   }
 
    return res;
 }

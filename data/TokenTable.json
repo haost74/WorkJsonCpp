@@ -14,6 +14,12 @@
 
     "fullTokenTable":
     [
-        {"simvol": "("}
+        {"simvol": ";"},
+        {"simvol": "("},
+        {"simvol": ")"},
+        {"simvol": "*"},
+        {"simvol": "/"},
+        {"simvol": "+"},
+        {"simvol": "-"}
     ]          
 }

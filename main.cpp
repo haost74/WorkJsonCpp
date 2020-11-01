@@ -2,10 +2,11 @@
 #include <string>
 
 #include<bits/stdc++.h> 
+#include <jsoncpp/json/json.h>
 
 #include "parser.cpp"
 #include "src/readerJeson.cpp"
-#include "src/reader_Json.cpp"
+#include "src/json/reader_Json.cpp"
 
 using std::cout;
 using std::string;
@@ -61,11 +62,11 @@ int main(int argc, char* argv[])
    //cout << vec[1] << '\n';
    //readerObject();
 
-   readerTest();
+   
    string path = "../data/TokenTable.json";
-   Reader<data> rd(path);
+   Reader<Json::Value> rd(path);
    auto res = rd.ReaderToken("fullTokenTable");
-
+  
     return 0;
 }
 
