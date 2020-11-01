@@ -34,7 +34,7 @@ vector<T> Reader<T>::ReaderToken(string nameArr)
    
    for(auto it = items.begin(); it < items.end(); ++it)
    {
-      res.push_back((*it)["simvol"]);
+      res.push_back((*it));
    }
 
    return res;

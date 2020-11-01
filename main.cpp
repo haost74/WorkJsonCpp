@@ -33,10 +33,9 @@ void run(string str, func_parse foo)
 
 //--------------------------------------
 
-//{"simvol": "("}
-class data
+//{"simvol": "("
+struct data : Json::Value
 {
-  public:
   string simvol;
 };
 
@@ -66,6 +65,13 @@ int main(int argc, char* argv[])
    string path = "../data/TokenTable.json";
    Reader<Json::Value> rd(path);
    auto res = rd.ReaderToken("fullTokenTable");
+
+    
+
+   for(auto it  = res.begin(); it < res.end(); ++it)
+   {
+     cout << (*it) << '\n';
+   }
   
     return 0;
 }

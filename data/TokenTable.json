@@ -14,12 +14,12 @@
 
     "fullTokenTable":
     [
-        {"simvol": ";"},
-        {"simvol": "("},
-        {"simvol": ")"},
-        {"simvol": "*"},
-        {"simvol": "/"},
-        {"simvol": "+"},
-        {"simvol": "-"}
+        {"simvol": ";", "priority": -1},
+        {"simvol": "(", "priority": -1},
+        {"simvol": ")", "priority": -1},
+        {"simvol": "*", "priority": 1},
+        {"simvol": "/", "priority": 1},
+        {"simvol": "+", "priority": 2},
+        {"simvol": "-", "priority": 2}
     ]          
 }
