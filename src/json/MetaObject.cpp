@@ -16,12 +16,20 @@ TokenTable::TokenTable(string path, string nameToken)
      {
            name = (*i);
            tu = (*it)[name];
+           //std::cout << name <<  " ----" << '\n';
           typeParam.push_back(InitPair(name, Is_number_str(tu.asString()), tu.asString()));
      }
-     
-   }
-     
+
+     ArrData.push_back(typeParam); 
+   }    
 }
+
+template <typename T>
+auto TokenTable::get_value(T t) 
+{
+   return 0;
+}
+
 
 std::pair<string, data> TokenTable::InitPair(string name, string type, string param)
 {

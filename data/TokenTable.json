@@ -14,7 +14,7 @@
 
     "fullTokenTable":
     [
-        {"simvol": ";", "priority": -1},
+        {"simvol": ";", "priority": -1, "data": 45},
         {"simvol": "(", "priority": -1},
         {"simvol": ")", "priority": -1},
         {"simvol": "*", "priority": 1},

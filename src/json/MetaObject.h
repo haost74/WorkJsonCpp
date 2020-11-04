@@ -18,8 +18,7 @@ struct data
 {
   string name;
   string type;
-  string param;
-  
+  string param;  
 };
 
 
@@ -28,9 +27,14 @@ using std::string;
 class TokenTable
 {
     public:
+
+     template <typename T>
+     auto get_value(T t); 
+
       TokenTable(string path, string nameToken);
       void InitData(Json::Value vl);
       std::vector<std::pair<string, data>> typeParam;
+      std::vector<std::vector<std::pair<string, data>>> ArrData;
     private:
       //std::vector<std::pair<string, void*>> typeParam;
       std::vector<string> nameParameters;
