@@ -16,21 +16,7 @@ TokenTable::TokenTable(string path, string nameToken)
      {
            name = (*i);
            tu = (*it)[name];
-          
-          //std::cout <<  name <<  " " <<  tu << '\n';
-          if(Is_number(tu.asString()))
-          {
-            //cout << tu.asString() << " " << 10 << '\n';
-            type = "number";
-          }
-          else
-          {
-            
-            //cout << tu.asString() << " " << "str" << '\n';
-            type = "string";
-
-          }
-          typeParam.push_back(InitPair(name, type, tu.asString()));
+          typeParam.push_back(InitPair(name, Is_number_str(tu.asString()), tu.asString()));
      }
      
    }
@@ -44,6 +30,19 @@ std::pair<string, data> TokenTable::InitPair(string name, string type, string pa
      d.type = type;
      d.param = param;
     return std::make_pair(name, d);;
+}
+
+std::string TokenTable::Is_number_str(const string& s)
+{
+    if(Is_number(s))
+    {
+      return "number";
+    }
+    else
+    {
+      return "string";
+    }
+    
 }
 
 bool TokenTable::Is_number(const std::string& s)
