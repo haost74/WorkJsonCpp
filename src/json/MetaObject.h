@@ -12,13 +12,18 @@
 #include <iostream>
 #include <utility>
 #include <fstream>
+#include <iomanip>
 
 
 struct data
 {
   string name;
   string type;
-  string param;  
+  string param_s;  
+  double param_d;
+
+  bool IsNumber(){return type == "number"; }
+
 };
 
 
@@ -37,6 +42,8 @@ class TokenTable
       std::vector<std::vector<std::pair<string, data>>> ArrData;
     private:
       //std::vector<std::pair<string, void*>> typeParam;
+      bool isOnlyDouble(const char* str);
+     std::string isOnlyDouble_s(const char* str);
       std::vector<string> nameParameters;
        Reader<Json::Value> * GetReader(string path);
        bool Is_number(const string& s);

@@ -17,17 +17,34 @@ TokenTable::TokenTable(string path, string nameToken)
            name = (*i);
            tu = (*it)[name];
            //std::cout << name <<  " ----" << '\n';
-          typeParam.push_back(InitPair(name, Is_number_str(tu.asString()), tu.asString()));
+          typeParam.push_back(InitPair(name, isOnlyDouble_s(tu.asString().c_str()), tu.asString()));
      }
 
      ArrData.push_back(typeParam); 
    }    
 }
 
-template <typename T>
-auto TokenTable::get_value(T t) 
+bool TokenTable::isOnlyDouble(const char* str)
 {
-   return 0;
+    char* endptr = 0;
+    strtod(str, &endptr);
+
+    if(*endptr != '\0' || endptr == str)
+        return false;
+    return true;
+}
+
+std::string TokenTable::isOnlyDouble_s(const char* str)
+{
+  if(isOnlyDouble(str))
+  {
+     return "number";
+  }
+  else
+  {
+    return "string";
+  }
+  
 }
 
 
@@ -36,7 +53,17 @@ std::pair<string, data> TokenTable::InitPair(string name, string type, string pa
      data d;
      d.name = name;
      d.type = type;
-     d.param = param;
+     d.param_s = param;
+     if(type == "number")
+     {
+           std::size_t offset = 0;
+       d.param_d = std::stod(d.param_s, &offset);
+     }
+     else
+     {
+       d.param_d = 0;
+     }
+     
     return std::make_pair(name, d);;
 }
 

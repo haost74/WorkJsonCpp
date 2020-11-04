@@ -31,10 +31,18 @@ int main(int argc, char* argv[])
    TokenTable tt(path, "fullTokenTable");
    
    auto vec = tt.typeParam;
-   /*
+   
    for(int i = 0; i < vec.size(); ++i)
-   cout << vec[i].second.name << " " << vec[i].second.type << " " << vec[i].second.param << '\n';
-   */
+   {
+        if(vec[i].second.IsNumber())
+        {
+                cout << vec[i].second.name << " " << vec[i].second.type << " " << vec[i].second.param_d <<  '\n';
+        }
+        else
+        {
+                cout << vec[i].second.name << " " << vec[i].second.type << " " << vec[i].second.param_s << '\n';
+        }
+   }
   
     return 0;
 }
