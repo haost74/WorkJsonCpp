@@ -7,8 +7,6 @@ using std::vector;
 
 using std::iostream;
 
-//#include "reader_Json.h"
-
     template<class T>
     class  Reader
     {

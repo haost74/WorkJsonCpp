@@ -6,6 +6,9 @@
 
 #endif
 
+
+#ifndef MAKEDATA_H
+#define MAKEDATA_H
 #include <string>
 #include <jsoncpp/json/json.h>
 #include <iostream>
@@ -37,4 +40,6 @@ class TokenTable
        bool Is_number(const string& s);
        std::pair<string, data> InitPair(string name, string type, string param);
 };
+
+#endif
 
