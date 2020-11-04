@@ -57,7 +57,9 @@ std::pair<string, data> TokenTable::InitPair(string name, string type, string pa
      if(type == "number")
      {
            std::size_t offset = 0;
-       d.param_d = std::stod(d.param_s, &offset);
+       //d.param_d = std::strtold(d.param_s, &offset);
+       char*stopStr;
+       d.param_d = std::strtold(d.param_s.c_str(), &stopStr);
      }
      else
      {

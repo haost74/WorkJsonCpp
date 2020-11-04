@@ -20,7 +20,7 @@ struct data
   string name;
   string type;
   string param_s;  
-  double param_d;
+  long double param_d;
 
   bool IsNumber(){return type == "number"; }
 

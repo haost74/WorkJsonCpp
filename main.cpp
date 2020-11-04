@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
 
 
    string path = "../data/TokenTable.json";
-   TokenTable tt(path, "fullTokenTable");
+   TokenTable tt(path, "tokenTable");
    
    auto vec = tt.typeParam;
    
@@ -43,6 +43,9 @@ int main(int argc, char* argv[])
                 cout << vec[i].second.name << " " << vec[i].second.type << " " << vec[i].second.param_s << '\n';
         }
    }
+
+   int r = vec[0].second.param_d;
+   cout << r << '\n';
   
     return 0;
 }
