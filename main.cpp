@@ -5,9 +5,8 @@
 #include <jsoncpp/json/json.h>
 
 #include "parser.cpp"
-#include "src/readerJeson.cpp"
 //#include "src/json/reader_Json.cpp"
-#include "src/json/MetaObject.cpp"
+#include "src/json/MetaObject.h"
 
 
 #ifndef SHAPE_CPP
@@ -42,16 +41,6 @@ void run(string str, func_parse foo)
 }
 
 
-//--------------------------------------
-
-//{"simvol": "("
-struct data : Json::Value
-{
-  string simvol;
-};
-
-//--------------------------------------
-
 
 int main(int argc, char* argv[])
 {
@@ -72,10 +61,16 @@ int main(int argc, char* argv[])
    //cout << vec[1] << '\n';
    //readerObject();
 
+
+//---------------------------------------------------
    
+   /*
    string path = "../data/TokenTable.json";
    Reader<Json::Value> rd(path);
    auto res = rd.ReaderToken("fullTokenTable");
+*/
+
+//---------------------------------------------------
 
 
 
@@ -85,12 +80,22 @@ int main(int argc, char* argv[])
      cout << (*it) << '\n';
    }
    */
+/*
 std::vector<string> nameParameters;
 auto resV = rd.GetNamesMember(nameParameters);
 //cout << resV.size() << '\n';
+*/
 
-
+   string path = "../data/TokenTable.json";
    TokenTable tt(path, "fullTokenTable");
+   
+   auto vec = tt.typeParam;
+   cout << vec.size() << '\n';
+
+   cout << vec[0].first << '\n';
+   for(int i = 0; i < vec.size(); ++i)
+   cout << vec[i].second.name << " " << vec[i].second.type << " " << vec[i].second.param << '\n';
+   
   
     return 0;
 }

@@ -43,7 +43,7 @@ using std::iostream;
     template<class T>
     vector<T> Reader<T>::ReaderToken(string nameArr)
     {
-    fstream ifs(pathJeson);
+    std::fstream ifs(pathJeson);
     Json::Reader reader;
     //Json::Value obj;
     reader.parse(ifs, obj);
