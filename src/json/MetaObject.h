@@ -15,13 +15,13 @@
 #include <iomanip>
 
 
-struct data
+class data
 {
+  public:
   string name;
   string type;
   string param_s;  
   long double param_d;
-
   bool IsNumber(){return type == "number"; }
 
 };
