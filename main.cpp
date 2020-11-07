@@ -12,6 +12,8 @@
 #include "src/type/Value.h"
 
 
+
+
 #ifndef SHAPE_CPP
 #define SHAPE_CPP
 
@@ -38,13 +40,25 @@ class foo
 int main(int argc, char* argv[])
 {
    
+   
+   /*
    Value vl;
-    vl.param_d = 10.25;
+    vl.param_s = "hello";
+    vl.type = "string";
 
     Value vl1;
     vl1 = vl;
-    auto vl2 = vl1 + vl;
-    cout << vl2.param_d << '\n';
+    auto vl2 = vl1 - vl;
+    cout << vl2.param_s << '\n';
+    */
+
+
+    Value vl;
+    vl.Param_d = 10.25;
+
+    auto d = vl.Param_d;
+    cout << d << '\n';
+
     return 0;
     
 
