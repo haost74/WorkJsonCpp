@@ -5,6 +5,7 @@
 #include <string>
 #include "ValueException.h"
 #include "src/utility/Property.cpp"
+#include "src/utility/PropertyStr.h"
 
 using std::string;
 
