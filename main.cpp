@@ -55,6 +55,8 @@ int main(int argc, char* argv[])
 
     Value vl;
     vl.Type_s = "number";
+    vl.Param_s = "";
+    vl.Param_d = 10.254731988;
     //vl.Param_d = 10.25;
     //vl.Type_s = "number";
     //cout << vl.Param_d << '\n';
@@ -62,6 +64,7 @@ int main(int argc, char* argv[])
     vl1 = vl;
     auto ty = vl1.Type_s;
     cout << static_cast<string>(vl1.Type_s) << '\n';
+    cout << vl1.Param_d << '\n';
     
     return 0;
 

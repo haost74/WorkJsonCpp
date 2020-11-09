@@ -2,7 +2,7 @@
 
 
 Value::Value()
-:Type_s(type), Param_s(param_s)
+:Type_s(type), Param_s(param_s), Param_d(param_d)
 //:Type(_type), Param_s(_param_s), Param_d(_param_d)
 {
    this->type= "";
@@ -16,7 +16,7 @@ Value& Value::operator=(const Value & val)
    this->param_s = val.param_s;
     this->param_d = val.param_d;
 
-   this->Type_s = static_cast<string>(val.Type_s);
+   //this->Type_s = static_cast<string>(val.Type_s);
     
    return *this;
 }

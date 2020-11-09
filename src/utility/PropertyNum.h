@@ -4,11 +4,11 @@
 class PropertyNum
 {
     private:
-    long double& val_str;
+    long double& val_num;
     public:
     operator const long double&() const;
     PropertyNum& operator= (const long double& str);
-    PropertyNum(long double& str);
+    PropertyNum(long double& num):val_num(num){};
 };
 
 #endif

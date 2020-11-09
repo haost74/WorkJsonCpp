@@ -33,7 +33,7 @@ class Value
       */
       PropertyStr Type_s;
       PropertyStr Param_s;
-      //PropertyNum Param_d;
+      PropertyNum Param_d;
 };
 
 
