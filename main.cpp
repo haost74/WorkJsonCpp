@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include<bits/stdc++.h> 
+#include<bits/stdc++.h>
 #include <jsoncpp/json/json.h>
 
 #include "parser.cpp"
@@ -39,8 +39,8 @@ class foo
 
 int main(int argc, char* argv[])
 {
-   
-   
+
+
    /*
    Value vl;
     vl.param_s = "hello";
@@ -54,22 +54,26 @@ int main(int argc, char* argv[])
 
 
     Value vl;
-    vl.Param_d = 10.25;
-
-    auto d = vl.Param_d;
-    cout << d << '\n';
-
-    return 0;
+    vl.Type_s = "number";
+    //vl.Param_d = 10.25;
+    //vl.Type_s = "number";
+    //cout << vl.Param_d << '\n';
+    Value vl1;
+    vl1 = vl;
+    auto ty = vl1.Type_s;
+    cout << static_cast<string>(vl1.Type_s) << '\n';
     
+    return 0;
+
 
    Object<data> obj;
    Object<data> obj1;
 
    string path = "../data/TokenTable.json";
    TokenTable tt(path, "fullTokenTable");
-   
+
    auto vec = tt.typeParam;
-   
+
    for(int i = 0; i < vec.size(); ++i)
    {
         if(vec[i].second.IsNumber())
@@ -82,7 +86,7 @@ int main(int argc, char* argv[])
         }
    }
 
-  
+
     obj = vec[0].second;
     obj1 = vec[1].second;
 
@@ -90,6 +94,3 @@ int main(int argc, char* argv[])
 
     return 0;
 }
-
-
-

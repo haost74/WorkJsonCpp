@@ -10,3 +10,6 @@ PropertyStr& PropertyStr::operator= (const string& str)
 PropertyStr::operator const string&() const{
     return val_str;
 }
+
+
+

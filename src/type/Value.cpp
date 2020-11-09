@@ -2,7 +2,8 @@
 
 
 Value::Value()
-:Type(_type), Param_s(_param_s), Param_d(_param_d)
+:Type_s(type), Param_s(param_s)
+//:Type(_type), Param_s(_param_s), Param_d(_param_d)
 {
    this->type= "";
    this->param_d = 0;
@@ -14,6 +15,9 @@ Value& Value::operator=(const Value & val)
    this->type = val.type;
    this->param_s = val.param_s;
     this->param_d = val.param_d;
+
+   this->Type_s = static_cast<string>(val.Type_s);
+    
    return *this;
 }
 
@@ -36,6 +40,6 @@ Value Value::operator-(const Value & val)
    {
       res.param_d = this->param_d - val.param_d;
    }
-   
+
    return res;
 }

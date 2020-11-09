@@ -6,6 +6,7 @@
 #include "ValueException.h"
 #include "src/utility/Property.cpp"
 #include "src/utility/PropertyStr.h"
+#include "src/utility/PropertyNum.h"
 
 using std::string;
 
@@ -25,9 +26,14 @@ class Value
       Value operator+ (const Value& vl);
       Value operator- (const Value& vl);
       Value ();
+      /*
       Property<string> Type;
       Property<string> Param_s;
       Property<long double> Param_d;
+      */
+      PropertyStr Type_s;
+      PropertyStr Param_s;
+      //PropertyNum Param_d;
 };
 
 
